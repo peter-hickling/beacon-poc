@@ -1,0 +1,12 @@
+/node_modules
+coverage
+typings
+build
+npm-debug.log
+.env
+.DS_Store
+
+# intellij files
+#
+.idea
+sylvia.iml

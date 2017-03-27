@@ -1,0 +1,34 @@
+{
+  "name": "xmpp-websocket-client",
+  "version": "0.0.1",
+  "description": "Websocket BLE beacon project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Peter Hickling",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^14.1.0",
+    "gulp": "3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-jshint": "2.0.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-webserver": "0.9.1",
+    "http-server": "0.9.0",
+    "jasmine": "2.5.3",
+    "jasmine-jquery": "2.1.1",
+    "jshint": "2.9.4",
+    "karma": "1.3.0",
+    "karma-chrome-launcher": "2.0.0",
+    "karma-coverage": "1.1.1",
+    "karma-jasmine": "1.1.0",
+    "karma-jasmine-jquery": "0.1.1",
+    "node-xmpp": "1.1.0"
+  },
+  "dependencies": {
+    "http": "0.0.0",
+    "websocket": "1.0.24"
+  }
+}
