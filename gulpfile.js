@@ -30,7 +30,7 @@ gulp.task('browserify', function() {
     .pipe(gulp.dest('./'))
 });
 
-gulp.task('start', ['browserify'], function() {
+gulp.task('frontend', ['browserify'], function() {
     connect.server({
         port: 8080,
         fallback: 'index.html'

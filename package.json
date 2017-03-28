@@ -4,7 +4,8 @@
   "description": "Websocket BLE beacon project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node test-backend/websocket-server.js"
   },
   "author": "Peter Hickling",
   "license": "ISC",

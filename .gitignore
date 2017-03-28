@@ -1,12 +1,7 @@
 /node_modules
-coverage
-typings
-build
+/.idea/*
+app.js
+
 npm-debug.log
 .env
 .DS_Store
-
-# intellij files
-#
-.idea
-sylvia.iml
