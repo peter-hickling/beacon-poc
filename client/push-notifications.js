@@ -6,7 +6,7 @@ function notifyMe(message, url) {
   if (Notification.permission !== "granted") {
     Notification.requestPermission().then(function(permission) {
       let notification = new Notification('Notification title', {
-        icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
+        icon: 'https://randomaurora.files.wordpress.com/2012/01/cheese.gif',
         body: message,
       });
 
@@ -16,7 +16,7 @@ function notifyMe(message, url) {
     });
   } else {
     let notification = new Notification('Notification title', {
-      icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
+      icon: 'https://randomaurora.files.wordpress.com/2012/01/cheese.gif',
       body: message,
     });
 
