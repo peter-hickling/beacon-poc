@@ -5,18 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node test-backend/websocket-server.js"
+    "start": "node test-backend/rest-server.js"
   },
   "author": "Peter Hickling",
   "license": "ISC",
   "devDependencies": {
-    "browserify": "^14.1.0",
+    "browserify": "14.1.0",
     "gulp": "3.9.1",
-    "gulp-browserify": "^0.5.1",
-    "gulp-connect": "^5.0.0",
+    "gulp-connect": "5.0.0",
     "gulp-jshint": "2.0.4",
-    "gulp-rename": "^1.2.2",
-    "gulp-webserver": "0.9.1",
     "http-server": "0.9.0",
     "jasmine": "2.5.3",
     "jasmine-jquery": "2.1.1",
@@ -26,10 +23,14 @@
     "karma-coverage": "1.1.1",
     "karma-jasmine": "1.1.0",
     "karma-jasmine-jquery": "0.1.1",
-    "node-xmpp": "1.1.0"
+    "node-xmpp": "1.1.0",
+    "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
+    "express": "4.15.2",
     "http": "0.0.0",
+    "request": "2.81.0",
+    "request-promise": "4.2.0",
     "websocket": "1.0.24"
   }
 }

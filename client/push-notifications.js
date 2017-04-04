@@ -2,46 +2,30 @@
  * Created by peterhickling on 21/03/2017.
  */
 
-function initialiseState() {
-  if (Notification.permission !== 'granted') {
-    console.log('The user has not granted the notification permission.');
-    return;
-  } else if (Notification.permission === 'blocked') {
-    console.log('The user has blocked notification permission and they cannot be rerequested.');
+function notifyMe(message, url) {
+  if (Notification.permission !== "granted") {
+    Notification.requestPermission().then(function(permission) {
+      let notification = new Notification('Notification title', {
+        icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
+        body: message,
+      });
+
+      notification.onclick = function () {
+        window.open(url);
+      };
+    });
   } else {
-    /* show a prompt to the user */
-  }
+    let notification = new Notification('Notification title', {
+      icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
+      body: message,
+    });
 
-  // Use serviceWorker.ready so this is only invoked
-  // when the service worker is available.
-  navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {
-    serviceWorkerRegistration.pushManager.getSubscription()
-      .then(function(subscription) {
-        if (!subscription) {
-          // Set appropriate app states.
-          return;
-        }
-      })
-      .catch(function(err) {
-        console.log('Error during getSubscription()', err);
-      });
-  });
-}
-
-function subscribeToNotifications() {
-  if ('showNotification' in ServiceWorkerRegistration.prototype) {
-    navigator.serviceworker.ready
-      .then(registration => {
-        return registration.pushManager.subscribe({
-          userVisibleOnly: true,
-          applicationServerKey: new Uint8Array()
-        });
-      })
-      .then(subscription => {
-        // Do something with the subscription.
-      })
-      .catch(error => {
-        // Do something with the error.
-      });
+    notification.onclick = function () {
+      window.open(url);
+    };
   }
 }
+
+module.exports = {
+  sendNotification: notifyMe
+};
