@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node test-backend/rest-server.js"
+    "start": "node test-backend/rest-server.js",
+    "gulp": "gulp frontend"
   },
   "author": "Peter Hickling",
   "license": "ISC",
