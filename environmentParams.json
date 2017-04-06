@@ -1,3 +1,8 @@
 {
-  "backendBaseUrl": "http://localhost:8080"
+  "backendBaseUrl": "http://localhost:8081",
+  "frontendBaseUrl": "http://localhost:8080",
+  "nameOfBeacon": "DriveByAds",
+  "addUrl": "http://bit.ly/DriveByAds",
+  "notificationMessage": "Click here for DEALLLLLS",
+  "notificationImage": "https://randomaurora.files.wordpress.com/2012/01/cheese.gif"
 }

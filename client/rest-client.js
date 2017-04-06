@@ -3,9 +3,9 @@
  */
 
 let request = require('request-promise');
-const baseUrl = "http://localhost:8081";
+const baseUrl = require("../environmentParams.json").backendBaseUrl;
 
-function getRequest(uuid) {
+getRequest = (uuid) => {
   return request.get(baseUrl + "/stuff?uuid=" + uuid).then(function(result) {
     return result;
   });
