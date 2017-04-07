@@ -4,9 +4,11 @@
 
 let express = require("express");
 let app = new express();
-const addUrl = require("../environmentParams.json").addUrl;
+const addUrl = require("../../environmentParams.json").addUrl;
 
-app.get("/stuff", function(req, res) {
+app.use('/static', express.static(__dirname + '/static'));
+
+app.get("/stuff", (req, res) => {
   let uuid = req.query.uuid;
   console.log("Base url: " + req.get("origin"));
   res.header("Access-Control-Allow-Origin", req.get("origin"))
@@ -16,7 +18,11 @@ app.get("/stuff", function(req, res) {
   console.log("Get request processed with uuid: " + uuid);
 });
 
-let server = app.listen(8081, function () {
+app.get("/", (req, res) => {
+  res.sendFile( __dirname + "/" + "index.html" );
+});
+
+let server = app.listen(8081, "0.0.0.0", () => {
   let host = server.address().address;
   let port = server.address().port;
 

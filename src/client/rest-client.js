@@ -3,7 +3,7 @@
  */
 
 let request = require('request-promise');
-const baseUrl = require("../environmentParams.json").backendBaseUrl;
+const baseUrl = require("../../environmentParams.json").backendBaseUrl;
 
 getRequest = (uuid) => {
   return request.get(baseUrl + "/stuff?uuid=" + uuid).then(function(result) {

@@ -5,7 +5,7 @@
 let notifications = require("./push-notifications");
 let client = require("./rest-client");
 let beaconScanner = require('./beacon-scanner');
-let environmentParams = require("../environmentParams.json");
+let environmentParams = require("../../environmentParams.json");
 
 document.addEventListener("DOMContentLoaded", event => {
   document.getElementById("bluetoothSearch").addEventListener('click', event => {
