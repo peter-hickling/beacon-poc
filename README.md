@@ -1,15 +1,17 @@
 # beacon-poc
+**Build Process**
+
+The build process involves packaging up all the client code with all of it's dependencies in a bundle. This is outputted to the static folder so it's ready to be served by the express backend server.
 
 **Backend**
 
-- websocket-server.js spins up server to listen on port 5322 for websocket connections and sends message back.
-- simple webserver serves up index.html on 8080. This references app.js that is the webserver-client.js plus all of it's 
-dependencies bundled into a single file.
+- express http server that serves up the single page index.html.
+- listens for get requests and responds with advertising goodies.
 
 **Frontend**
 
-- websocket-client.js opens websocket connection to backend and listens for response.
+- appBundle.js searches for BLE beacons on button press. Once found it makes an async get with the beacons UUID to the backend. On response it opens a notification with the response content.
 
-To run websocket server enter "npm run start".
+**Running App**
 
-To run webserver enter "gulp start", this bundles all the js and then serves it up.
+To run the backend server enter "npm run start".
