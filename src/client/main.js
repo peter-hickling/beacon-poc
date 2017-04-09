@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", event => {
   document.getElementById("bluetoothSearch").addEventListener('click', event => {
     beaconScanner.searchForBeacons(environmentParams.nameOfBeacon).then(device => {
       client.get(device.id).then(response => {
-        notifications.sendNotification(environmentParams.notificationMessage, response, environmentParams.notificationImage);
+        notifications.sendNotification(environmentParams.notificationMessage, response, "static/cheese.png");
       });
     });
   });
